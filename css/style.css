@@ -85,6 +85,40 @@ body {
   margin: auto 0.5rem;
 }
 
+/* navbar search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #ffffff;
+  width: 35rem;
+  height: 3.8rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  border-bottom-right-radius: 2rem;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  margin-right: 1.5rem;
+  color: var(--bg);
+  font-size: 2rem;
+}
 #hamburger-menu {
   display: none;
 }
@@ -441,6 +475,20 @@ footer .creedit a {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  /* search form */
+  .navbar .search-form {
+    height: 4.7rem;
+    width: 38rem;
+  }
+
+  .search-form input {
+    font-size: 3rem;
+  }
+
+  .search-form label {
+    font-size: 1rem;
   }
   .hero .content {
     margin-left: 1.8rem;

@@ -1,10 +1,27 @@
 // toggle class active
 const navbarNav = document.querySelector(".navbar-nav");
 // ketika hamburger menu di-klik
-document.querySelector("#hamburger-menu").onclick = () => {
+document.querySelector("#hamburger-menu").onclick = (e) => {
   navbarNav.classList.toggle("active");
+  e.preventDefault();
+};
+// toggle class active for search form
+const searchForm = document.querySelector(".search-form");
+const searchBox = document.querySelector("#search-box");
+const searchButton = document.querySelector("#search-button");
+const navbarExtra = document.querySelector(".search-form");
+
+document.querySelector("#search-button").onclick = (e) => {
+  searchForm.classList.toggle("active");
+  searchBox.focus();
+  e.preventDefault();
 };
 
+document.addEventListener("click", function (e) {
+  if (!searchButton.contains(e.target) && !navbarExtra.contains(e.target)) {
+    navbarExtra.classList.remove("active");
+  }
+});
 // klik di luar sidebar untuk meghilangkan nav
 const hamburger = document.querySelector("#hamburger-menu");
 
@@ -13,21 +30,4 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
-
-function animateOnScroll(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate");
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
-var room = document.querySelector(".room");
-
-var observer = new IntersectionObserver(animateOnScroll, {
-  root: null,
-  threshold: 0.3, // Adjust the threshold as per your needs
-});
-
-observer.observe(room);
+     
