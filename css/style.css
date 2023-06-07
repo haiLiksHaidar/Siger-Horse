@@ -158,7 +158,7 @@ body {
 .about,
 .room,
 .contact {
-  padding: 6.2rem 2.5% 1.4rem;
+  padding: 6.2rem 2.5% 1.7rem;
 }
 
 .about .row {
@@ -502,6 +502,9 @@ footer .creedit a {
     gap: 20px;
     margin-top: 0.9rem;
   }
+  .room h2 {
+    margin-bottom: 0.5rem;
+  }
   .room p {
     font-size: larger;
     font-weight: 300;
@@ -512,7 +515,7 @@ footer .creedit a {
   .room .row .room-card .room-card-tittle {
     font-size: 1.7rem;
     margin-top: -1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
   /* section animation */
   .room .row .groub1media {
@@ -608,6 +611,9 @@ footer .creedit a {
     gap: 20px;
     margin-top: 0.9rem;
   }
+  .room h2 {
+    margin-bottom: 0.5rem;
+  }
   .room p {
     font-size: larger;
     font-weight: 300;
@@ -617,8 +623,11 @@ footer .creedit a {
   }
   .room .row .room-card .room-card-tittle {
     font-size: 1.7rem;
-    margin-top: -1.2rem;
+    margin-top: -1.3rem;
     margin-bottom: 1rem;
+  }
+  .room .row .room-card .room-card-price {
+    margin-top: -1.9rem;
   }
   /* section animation */
   .room .row .groub1media {
