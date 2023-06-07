@@ -568,7 +568,7 @@ footer .creedit a {
   }
 }
 /* mobile phone */
-@media (max-width: 320px) {
+@media (max-width: 500px) {
   html {
     font-size: 50%;
   }
