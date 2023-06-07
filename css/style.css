@@ -405,6 +405,9 @@ footer .creedit a {
   #hamburger-menu {
     display: inline-block;
   }
+  .navbar {
+    align-items: center;
+  }
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -571,6 +574,9 @@ footer .creedit a {
 @media (max-width: 400px) {
   html {
     font-size: 50%;
+  }
+  .navbar {
+    align-items: center;
   }
   .hero .content h1 {
     line-height: 5.5rem;
