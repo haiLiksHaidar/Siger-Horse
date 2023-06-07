@@ -207,6 +207,9 @@ body {
 .room {
   overflow: hidden;
 }
+.room h2 {
+  margin-bottom: 0.2rem;
+}
 .room .row {
   display: flex;
   flex-wrap: wrap;
