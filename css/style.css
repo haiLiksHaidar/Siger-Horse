@@ -568,9 +568,13 @@ footer .creedit a {
   }
 }
 /* mobile phone */
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   html {
     font-size: 50%;
+  }
+  .hero .content h1 {
+    line-height: 5.5rem;
+    margin-bottom: 2.3rem;
   }
   .about .row .about-img img {
     margin-bottom: 0.1rem;
