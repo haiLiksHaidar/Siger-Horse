@@ -333,7 +333,7 @@ body {
 }
 
 /* section animation */
-
+/* 
 .room .row .groub1 {
   opacity: 0;
   transform: translateX(-100%);
@@ -379,7 +379,7 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 
 /* product section */
 .product .row {

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Russian-Village</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -151,7 +152,13 @@
           <h3 class="room-card-tittle">・ VIP-Room ・</h3>
           <p class="room-card-price">1500$/Night</p>
         </div>
-        <div class="room-card groub2 groub2media">
+        <div
+          class="room-card groub2 groub2media"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-delay="300"
+          data-aos-duration="2000"
+        >
           <img src="images/room/room-2.jpg" alt="room" class="room-card-img" />
           <h3 class="room-card-tittle">・ Superior-Room ・</h3>
           <p class="room-card-price">1250$/Night</p>
@@ -367,6 +374,11 @@
         </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({});
+    </script>
     <!-- modal box item detail end -->
     <!-- feather icons -->
     <script>
