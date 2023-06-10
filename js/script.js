@@ -50,7 +50,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// modal box
+// Modal box
 const itemDetailModal = document.querySelector("#item-detail-modal");
 const itemDetailButtons = document.querySelectorAll(".item-detail-button");
 
@@ -61,14 +61,69 @@ itemDetailButtons.forEach((btn) => {
   };
 });
 
-// klik tombil close
 document.querySelector(".modal .close-icon").onclick = (e) => {
   itemDetailModal.style.display = "none";
   e.preventDefault();
 };
-// klik luar modal
+
 window.onclick = (e) => {
   if (e.target === itemDetailModal) {
     itemDetailModal.style.display = "none";
   }
+  if (e.target === itemDetailModal2) {
+    itemDetailModal2.style.display = "none";
+  }
+  if (e.target === itemDetailModal3) {
+    itemDetailModal3.style.display = "none";
+  }
+  if (e.target === itemDetailModal4) {
+    itemDetailModal4.style.display = "none";
+  }
+};
+
+// Modal box2
+const itemDetailModal2 = document.querySelector("#item-detail-modal2");
+const itemDetailButtons2 = document.querySelectorAll(".item-detail-button2");
+
+itemDetailButtons2.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal2.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+document.querySelector(".modal2 .close-icon2").onclick = (e) => {
+  itemDetailModal2.style.display = "none";
+  e.preventDefault();
+};
+
+// Modal box3
+const itemDetailModal3 = document.querySelector("#item-detail-modal3");
+const itemDetailButtons3 = document.querySelectorAll(".item-detail-button3");
+
+itemDetailButtons3.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal3.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+document.querySelector(".modal3 .close-icon3").onclick = (e) => {
+  itemDetailModal3.style.display = "none";
+  e.preventDefault();
+};
+// Modal box4
+const itemDetailModal4 = document.querySelector("#item-detail-modal4");
+const itemDetailButtons4 = document.querySelectorAll(".item-detail-button4");
+
+itemDetailButtons4.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal4.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+document.querySelector(".modal4 .close-icon4").onclick = (e) => {
+  itemDetailModal4.style.display = "none";
+  e.preventDefault();
 };
