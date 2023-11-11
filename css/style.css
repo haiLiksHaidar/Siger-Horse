@@ -39,6 +39,9 @@ body {
   right: 0;
   z-index: 9999;
 }
+.navbar .navbar-nav {
+  margin-left: 10rem;
+}
 
 .navbar .navbar-logo {
   font-size: 1.8rem;
@@ -51,6 +54,7 @@ body {
   color: #ffffff;
   font-size: 3rem;
 }
+
 .navbar .navbar-logo span {
   color: #ffffff;
   font-size: 2rem;
@@ -208,7 +212,6 @@ body {
 .hero .content h1 {
   font-size: 5em;
   color: #ffffff;
-  line-height: 1.2;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
 }
 
@@ -218,7 +221,7 @@ body {
 
 .hero .content p {
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
   line-height: 1;
   font-weight: 20rem;
@@ -229,12 +232,16 @@ body {
   margin-top: 1rem;
   display: inline-block;
   padding: 0.1rem 0.8rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: #ffffff;
   background-color: var(--primary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+}
+.hero .content .cta:hover {
+  background-color: #a8623d;
+  transform: scale(0.9);
 }
 
 /* about section */
@@ -258,10 +265,9 @@ body {
   padding-bottom: 0.1px;
   border-bottom: 0.3rem solid #ffffff;
   border-radius: 20px;
+  margin-bottom: 0.8rem;
 }
 
-.about h2 span,
-.room h2 span,
 .product h2 span {
   color: var(--primary);
 }
@@ -287,6 +293,7 @@ body {
 
 .about .row .content p {
   color: #ffffff;
+  text-align: justify;
 }
 
 /* menu section */
@@ -303,7 +310,10 @@ body {
   justify-content: center;
   color: #ffffff;
 }
-
+.room .row .room-card a {
+  color: white;
+  text-decoration: none;
+}
 .room p,
 .contact p,
 .product p {
@@ -316,6 +326,13 @@ body {
   text-align: center;
   line-height: 3rem;
   margin: auto 2.5rem auto 2.5rem;
+}
+.row .room-card {
+  transition: transform 0.5s !important; /* Tambahkan !important */
+}
+
+.row .room-card:hover {
+  transform: scale(0.9);
 }
 
 .room-card-img {
@@ -390,7 +407,7 @@ body {
 }
 
 .product p {
-  margin: 0.5rem 17rem;
+  margin: 0.1rem 17rem;
 }
 
 .product .product-card {
@@ -441,14 +458,7 @@ body {
   font-weight: lighter;
   margin-bottom: 1rem;
 }
-.product .product-content .product-stars {
-  color: var(--primary);
-  margin-top: 0.5rem;
-}
 
-.product .product-stars .star {
-  fill: var(--primary);
-}
 /* contact section */
 .contact .row {
   display: flex;
@@ -549,7 +559,15 @@ footer .creedit a {
 .modal,
 .modal2,
 .modal3,
-.modal4 {
+.modal4,
+.modal5,
+.modal6,
+.modal7,
+.modal8,
+.modal9,
+.modal10,
+.modal11,
+.modal12 {
   display: none;
   position: fixed;
   z-index: 9999;
@@ -564,13 +582,21 @@ footer .creedit a {
 .modal-container,
 .modal-container2,
 .modal-container3,
-.modal-container4 {
+.modal-container4,
+.modal-container5,
+.modal-container6,
+.modal-container7,
+.modal-container8,
+.modal-container9,
+.modal-container10,
+.modal-container11,
+.modal-container12 {
   position: relative;
-  background-color: #fefefe;
+  background-color: #000000;
   color: var(--bg);
   margin: 15% auto;
   padding: 1.2rem;
-  border: 1px solid #666;
+  border: 5px solid var(--primary);
   width: 80%;
   height: 25rem;
   animation: animateModal 0.5s;
@@ -590,14 +616,30 @@ footer .creedit a {
 .modal-container .close-icon,
 .modal-container2 .close-icon2,
 .modal-container3 .close-icon3,
-.modal-container4 .close-icon4 {
+.modal-container4 .close-icon4,
+.modal-container5 .close-icon5,
+.modal-container6 .close-icon6,
+.modal-container7 .close-icon7,
+.modal-container8 .close-icon8,
+.modal-container9 .close-icon9,
+.modal-container10 .close-icon10,
+.modal-container11 .close-icon11,
+.modal-container12 .close-icon12 {
   position: absolute;
   right: 1rem;
 }
 .modal-content,
 .modal-content2,
 .modal-content3,
-.modal-content4 {
+.modal-content4,
+.modal-content5,
+.modal-content6,
+.modal-content7,
+.modal-content8,
+.modal-content9,
+.modal-content10,
+.modal-content11,
+.modal-content12 {
   display: flex;
   flex-wrap: nowrap;
 }
@@ -605,7 +647,15 @@ footer .creedit a {
 .modal-content img,
 .modal-content2 img,
 .modal-content3 img,
-.modal-content4 img {
+.modal-content4 img,
+.modal-content5 img,
+.modal-content6 img,
+.modal-content7 img,
+.modal-content8 img,
+.modal-content9 img,
+.modal-content10 img,
+.modal-content11 img,
+.modal-content12 img {
   height: 20rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
@@ -614,38 +664,104 @@ footer .creedit a {
 .modal-content h3,
 .modal-content2 h3,
 .modal-content3 h3,
-.modal-content4 h3 {
+.modal-content4 h3,
+.modal-content5 h3,
+.modal-content6 h3,
+.modal-content7 h3,
+.modal-content8 h3,
+.modal-content9 h3,
+.modal-content10 h3,
+.modal-content11 h3,
+.modal-content12 h3 {
   font-size: 1.9rem;
+  color: white;
 }
 .modal-content p,
 .modal-content2 p,
 .modal-content3 p,
-.modal-content4 p {
+.modal-content4 p,
+.modal-content5 p,
+.modal-content6 p,
+.modal-content7 p,
+.modal-content8 p,
+.modal-content9 p,
+.modal-content10 p,
+.modal-content11 p,
+.modal-content12 p {
   font-size: 1.1rem;
   line-height: 1.8rem;
   margin-top: 0.6rem;
   margin-bottom: 0.7rem;
+  color: white;
 }
 
-.modal-content a,
+.modal .modal-container .as,
+.modal2 .modal-container2 .as,
+.modal3 .modal-container3 .as,
+.modal4 .modal-container4 .as,
+.modal5 .modal-container5 .as,
+.modal6 .modal-container6 .as,
+.modal7 .modal-container7 .as,
+.modal8 .modal-container8 .as,
+.modal9 .modal-container9 .as,
+.modal10 .modal-container10 .as,
+.modal11 .modal-container11 .as,
+.modal12 .modal-container12 .as {
+  color: white;
+}
+
+.modal .modal-container .as:hover,
+.modal2 .modal-container2 .as:hover,
+.modal3 .modal-container3 .as:hover,
+.modal4 .modal-container4 .as:hover,
+.modal5 .modal-container5 .as:hover,
+.modal6 .modal-container6 .as:hover,
+.modal7 .modal-container7 .as:hover,
+.modal8 .modal-container8 .as:hover,
+.modal9 .modal-container9 .as:hover,
+.modal10 .modal-container10 .as:hover,
+.modal11 .modal-container11 .as:hover,
+.modal12 .modal-container12 .as:hover {
+  transform: scale(0.9);
+}
+.modal .modal-container img:hover,
+.modal2 .modal-container2 img:hover,
+.modal3 .modal-container3 img:hover,
+.modal4 .modal-container4 img:hover,
+.modal5 .modal-container5 img:hover,
+.modal6 .modal-container6 img:hover,
+.modal7 .modal-container7 img:hover,
+.modal8 .modal-container8 img:hover,
+.modal9 .modal-container9 img:hover,
+.modal10 .modal-container10 img:hover,
+.modal11 .modal-container11 img:hover,
+.modal12 .modal-container12 img:hover {
+  transform: scale(0.9);
+}
+/* .modal-content a,
 .modal-content2 a,
 .modal-content3 a,
 .modal-content4 a {
   display: flex;
   gap: 1rem;
-  width: 12rem;
   background-color: var(--primary);
   color: #ffffff;
-  margin-top: 1rem;
-  padding: 1rem 1.6rem;
-}
+  padding: 0.5rem 0.5rem;
+  margin-top: 4rem;
+} */
 
-.modal .product-price,
+/* .modal .product-price,
 .modal2 .product-price,
 .modal3 .product-price,
 .modal4 .product-price {
   font-size: 1.3rem;
+} */
+/* .modal .modal-container .as {
+  color: white;
 }
+.modal .modal-container .as2 {
+  color: white;
+} */
 
 /* media queris */
 
@@ -655,8 +771,24 @@ footer .creedit a {
   html {
     font-size: 75%;
   }
+  .hero .content p {
+    font-size: 1.3rem;
+  }
 }
 /* tablet */
+@media (min-width: 980px) {
+  .navbar .navbar-extra .cari {
+    margin-right: -0.7rem;
+  }
+  .navbar-nav {
+    margin-right: -20rem;
+  }
+}
+@media (max-width: 970px) {
+  .navbar-nav {
+    margin-right: -3.5rem;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 60%;
@@ -702,19 +834,6 @@ footer .creedit a {
     transform: scaleX(0.2);
   }
 
-  /* search form */
-  .navbar .search-form {
-    height: 4.7rem;
-    width: 38rem;
-  }
-
-  .search-form input {
-    font-size: 3rem;
-  }
-
-  .search-form label {
-    margin-top: 0.5rem;
-  }
   .hero .content {
     margin-left: 1.8rem;
     max-width: 90rem;
@@ -786,7 +905,7 @@ footer .creedit a {
     font-weight: 300;
   }
   .room .row .room-card {
-    margin-bottom: -20px;
+    margin: auto -4rem auto -4rem;
   }
   .room .row .room-card .room-card-tittle {
     font-size: 1.7rem;
@@ -855,7 +974,7 @@ footer .creedit a {
   .product p {
     font-size: larger;
     font-weight: 300;
-    margin: 7rem;
+    margin: 4rem;
     margin-top: 0.5rem;
   }
 
@@ -867,13 +986,29 @@ footer .creedit a {
   .modal-content,
   .modal-content2,
   .modal-content3,
-  .modal-content4 {
+  .modal-content4,
+  .modal-content5,
+  .modal-content6,
+  .modal-content7,
+  .modal-content8,
+  .modal-content9,
+  .modal-content10,
+  .modal-content11,
+  .modal-content12 {
     flex-wrap: wrap;
   }
   .modal-container,
   .modal-container2,
   .modal-container3,
-  .modal-container4 {
+  .modal-container4,
+  .modal-container5,
+  .modal-container6,
+  .modal-container7,
+  .modal-container8,
+  .modal-container9,
+  .modal-container10,
+  .modal-container11,
+  .modal-container12 {
     height: 50rem;
   }
 }
@@ -901,10 +1036,10 @@ footer .creedit a {
     margin-top: 0.9rem;
     align-items: center;
   }
-  .room .row .room-card {
+  /* .room .row .room-card {
     width: 40rem;
     height: auto;
-  }
+  } */
   .room .row .room-card .room-card-tittle {
     margin-bottom: 1.5rem;
   }
@@ -922,9 +1057,9 @@ footer .creedit a {
     font-size: larger;
     font-weight: 300;
   }
-  .room .row .room-card {
+  /* .room .row .room-card {
     margin-bottom: -20px;
-  }
+  } */
   .room .row .room-card .room-card-tittle {
     font-size: 1.7rem;
     margin-top: -1.3rem;
@@ -975,18 +1110,6 @@ footer .creedit a {
     padding-left: 2rem;
     height: 40px;
   }
-  /* product section */
-  .product .row {
-    margin-top: 3.7rem;
-  }
-  .product .product-icon a {
-    width: 5.3rem;
-    height: 5.3rem;
-  }
-  .product p {
-    margin: 0 2rem;
-    margin-top: 0.5rem;
-  }
   /* footer */
   footer {
     background-color: var(--primary);
@@ -999,14 +1122,30 @@ footer .creedit a {
   .modal-container,
   .modal-container2,
   .modal-container3,
-  .modal-container4 {
+  .modal-container4,
+  .modal-container5,
+  .modal-container6,
+  .modal-container7,
+  .modal-container8,
+  .modal-container9,
+  .modal-container10,
+  .modal-container11,
+  .modal-container12 {
     margin-top: 11rem;
   }
 
   .modal-container,
   .modal-container2,
   .modal-container3,
-  .modal-container4 {
+  .modal-container4,
+  .modal-container5,
+  .modal-container6,
+  .modal-container7,
+  .modal-container8,
+  .modal-container9,
+  .modal-container10,
+  .modal-container11,
+  .modal-container12 {
     height: 55rem;
   }
 }
